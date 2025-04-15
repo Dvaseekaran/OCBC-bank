@@ -1,0 +1,67 @@
+# Translations template for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-04-15 13:18+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: templates/statement.html:18
+msgid "Credit Card Statement"
+msgstr ""
+
+#: templates/statement.html:22
+msgid "Customer Information"
+msgstr ""
+
+#: templates/statement.html:23
+msgid "Name"
+msgstr ""
+
+#: templates/statement.html:24
+msgid "Account Number"
+msgstr ""
+
+#: templates/statement.html:25
+msgid "Statement Date"
+msgstr ""
+
+#: templates/statement.html:26
+msgid "Address"
+msgstr ""
+
+#: templates/statement.html:30
+msgid "Transaction History"
+msgstr ""
+
+#: templates/statement.html:34
+msgid "Date"
+msgstr ""
+
+#: templates/statement.html:35
+msgid "Description"
+msgstr ""
+
+#: templates/statement.html:36
+msgid "Debit"
+msgstr ""
+
+#: templates/statement.html:37
+msgid "Credit"
+msgstr ""
+
+#: templates/statement.html:38
+msgid "Balance"
+msgstr ""
+

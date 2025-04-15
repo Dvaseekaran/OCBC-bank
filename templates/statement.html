@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="{{ language }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #E02020;
+            padding-bottom: 20px;
+        }
+        
+        .bank-name {
+            color: #E02020;
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .customer-info {
+            margin-bottom: 30px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="bank-name">OCBC BANK</div>
+        <h2>{{ t['Credit Card Statement'] }}</h2>
+    </div>
+    
+    <div class="customer-info">
+        <h2>{{ t['Customer Information'] }}</h2>
+        <p><strong>{{ t['Name'] }}:</strong> {{ customer.name }}</p>
+        <p><strong>{{ t['Account Number'] }}:</strong> {{ customer.account_number }}</p>
+        <p><strong>{{ t['Statement Date'] }}:</strong> {{ generated_date.strftime('%Y-%m-%d') }}</p>
+        <p><strong>{{ t['Address'] }}:</strong> {{ customer.address }}</p>
+    </div>
+    
+    <div class="transactions">
+        <h2>{{ t['Transaction History'] }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>{{ t['Date'] }}</th>
+                    <th>{{ t['Description'] }}</th>
+                    <th>{{ t['Debit'] }}</th>
+                    <th>{{ t['Credit'] }}</th>
+                    <th>{{ t['Balance'] }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction.transaction_date.strftime('%Y-%m-%d') }}</td>
+                    <td>{{ transaction.description }}</td>
+                    <td>{{ transaction.debit if transaction.debit else '' }}</td>
+                    <td>{{ transaction.credit if transaction.credit else '' }}</td>
+                    <td>{{ transaction.balance }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
